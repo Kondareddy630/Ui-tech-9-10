@@ -1,0 +1,21 @@
+CSS Pseudo-Elements
+---------------------------
+
+CSS Pseudo-Elements selectors used to style the part of the Element.
+
+syntax:
+----------
+
+
+selector::Pseudo elementName()
+
+List Pseudo Elements
+---------------------
+::marker: used to change the number or bullets color
+::first-line:
+::first-letter:
+::placeholder:
+::before
+::after
+::selection
+

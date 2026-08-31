@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+ol li::marker{
+    color:red;
+}
+
+#p1::first-letter{
+    color:red;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    float: left;
+    margin-top: -20px;
+}
+
+#p2::first-line{
+    color:blue;
+    background-color: lightblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+input::placeholder{
+    color:lightgray;
+    padding-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#login{
+    background: blue;
+    color:white;
+    padding: 10px 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+::selection{
+    background-color: rgb(120, 224, 224);
+}
+
+ul li{
+    list-style-type: none;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+
+
+ul li:nth-child(1)::before{
+   content: url("../images/facebook.png");
+}
+
+
+ul li:nth-child(2)::before{
+    content:url("../images/youtube.png");
+}
+
+
+ul li:nth-child(3)::before{
+    content:url("../images/twitter.png");
+}
+
+ul li:nth-child(4)::after{
+    content:url("../images/google.png");
+}
+</style>
+  
+</head>
+<body>
+
+
+
+    <ul>
+        <li>
+            <a href="">Facebook</a>
+        </li>
+
+        <li>
+            <a href="">Youtube</a>
+        </li>
+
+        <li>
+            <a href="">Twitter</a>
+        </li>
+
+        <li>
+            <a href="">Google</a>
+        </li>
+    </ul>
+
+<form>
+
+    <div>
+        <input type="text" placeholder="Username">
+    </div>
+
+    <div>
+        <input type="password" placeholder="Password">
+    </div>
+
+    <div>
+        <input type="submit" value="Login" id="login">
+    </div>
+    
+</form>
+
+
+
+<p id="p2">Hello ipsum dolor sit amet consectetur adipisicing elit. Rem velit aperiam dolorem! Dolore omnis nihil commodi, iste animi amet, aliquid nostrum architecto, qui alias laboriosam accusantium ea inventore ipsa debitis veniam minima temporibus! Eveniet expedita in architecto assumenda necessitatibus ea minima officiis vel totam perferendis distinctio provident voluptates fugit quisquam dolor dolorum eius laboriosam officia, sapiente molestiae sit est cupiditate sed. A doloribus quis adipisci itaque quibusdam magni nulla? Consectetur ipsum amet maxime iste quo eius magnam minus necessitatibus? Quisquam.</p>
+
+
+
+<p id="p1">Hello ipsum dolor sit amet consectetur adipisicing elit. Rem velit aperiam dolorem! Dolore omnis nihil commodi, iste animi amet, aliquid nostrum architecto, qui alias laboriosam accusantium ea inventore ipsa debitis veniam minima temporibus! Eveniet expedita in architecto assumenda necessitatibus ea minima officiis vel totam perferendis distinctio provident voluptates fugit quisquam dolor dolorum eius laboriosam officia, sapiente molestiae sit est cupiditate sed. A doloribus quis adipisci itaque quibusdam magni nulla? Consectetur ipsum amet maxime iste quo eius magnam minus necessitatibus? Quisquam.</p>
+
+
+<ol>
+    <li>html</li>
+    <li>css</li>
+    <li>javascript</li>
+    <li>bootstrap</li>
+    <li>react</li>
+    <li>angular</li>
+</ol>
+
+
+<ul>
+    <li>html</li>
+    <li>css</li>
+    <li>javascript</li>
+    <li>bootstrap</li>
+    <li>react</li>
+    <li>angular</li>
+</ul>
+    
+</body>
+</html>
