@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *{
+            margin:0px;
+        }
+        #container{
+
+            width: 600px;
+            height: 300px;
+            background-color: lightgray;
+            box-shadow: 0px 0px 6px black;
+            border-radius: 10px;
+            margin: 100px auto;
+            position: relative;
+
+        }
+
+        #container img{
+
+            width: inherit;
+            height:inherit;
+            border-radius: inherit;
+
+        }
+
+        .content{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(0,0,0,0.5);
+            color:white;
+            width: 50%;
+            height: 100%;
+            border-radius: 10px 0px 0px 10px;
+            position: absolute;
+            left:0px;
+            top:0px;
+
+            transform-origin: center left;
+
+            transform: perspective(200px) rotateY(90deg);
+             transition:  all linear 1s;
+
+        }
+
+
+
+        
+        .content1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(255,200,0,0.5);
+            color:white;
+            width: 50%;
+            height: 100%;
+            border-radius: 0px 10px 10px 0px;
+            position: absolute;
+            right:0px;
+            top:0px;
+
+            transform-origin: center right;
+
+            transform: perspective(200px) rotateY(-90deg);
+             transition:  all linear 1s;
+
+        }
+
+
+
+        
+        
+        .content2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgba(0,255,0,0.5);
+            color:white;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            position: absolute;
+            left:0px;
+            top:0px;
+
+            transform-origin:top  center; 
+
+            transform: perspective(200px) rotateX(-90deg);
+             transition:  all linear 1s;
+
+        }
+
+        .content h2,p{
+            padding: 20px;
+        }
+
+         .content1 h2,p{
+            padding: 20px;
+        }
+
+         .content2 h2,p{
+            padding: 20px;
+        }
+
+        #container:hover .content{
+            transform: perspective(200px) rotateY(0deg);
+            transition:  all linear 1s;
+        }
+
+         #container:hover .content1{
+            transform: perspective(200px) rotateY(0deg);
+            transition:  all linear 1s;
+        }
+
+
+           #container:hover .content2{
+            transform: perspective(200px) rotateX(0deg);
+            transition:  all linear 1s;
+        }
+
+    </style>
+    
+</head>
+<body>
+
+
+<div id="container">
+
+    <img src="../images/food10.jpg">
+
+    <div class="content">
+        <h2>Welcome</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis voluptatibus enim quis? Debitis asperiores eligendi officia. Vel aspernatur labore illum assumenda minima ex, sit rerum. Ipsa ex et optio cum magni sit voluptatibus maiores, amet nobis, natus obcaecati, laborum maxime?</p>
+
+    </div>
+
+
+     <div class="content1">
+        <h2>Visit Again</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis voluptatibus enim quis? Debitis asperiores eligendi officia. Vel aspernatur labore illum assumenda minima ex, sit rerum. Ipsa ex et optio cum magni sit voluptatibus maiores, amet nobis, natus obcaecati, laborum maxime?</p>
+
+    </div>
+
+      <div class="content2">
+        <h2>Visit Again</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis voluptatibus enim quis? Debitis asperiores eligendi officia. Vel aspernatur labore illum assumenda minima ex, sit rerum. Ipsa ex et optio cum magni sit voluptatibus maiores, amet nobis, natus obcaecati, laborum maxime?</p>
+
+    </div>
+
+</div>
+    
+</body>
+</html>

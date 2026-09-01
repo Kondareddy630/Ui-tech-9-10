@@ -1,0 +1,11 @@
+A pseudo-class in CSS is a keyword added to a selector that defines a special state of an HTML element. It allows you to style elements based on conditions such as when a user hovers over them, clicks them, or when they are the first child of a parent.
+
+Common Pseudo-Classes
+Pseudo-class	Description	Example
+:hover	Applies when the mouse is over an element	a:hover { color: red; }
+:active	Applies while an element is being clicked	button:active { background: green; }
+:focus	Applies when an input or element has focus	input:focus { border: 2px solid blue; }
+:visited	Styles visited links	a:visited { color: purple; }
+:first-child	Selects the first child of its parent	p:first-child { color: red; }
+:last-child	Selects the last child	li:last-child { font-weight: bold; }
+:nth-child(n)	Selects the nth child	tr:nth-child(2) { background: lightgray; }
