@@ -3,6 +3,49 @@
 <head>
 <style>
 
+    #p1{
+
+        background: linear-gradient(45deg,blue,green);
+        color:white;
+        text-align: justify;
+        padding: 30px;
+        font-family: cursive;
+        width: 300px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+        transition: 1s;
+
+    }
+
+    #p1:hover{
+    transform: translateY(-20px);
+    background: linear-gradient(45deg,red,lime);
+    transition: 1s;
+    }
+
+    #p1:active{
+    transform: scale(0.5,0.5);
+    transition: 1s;
+
+    }
+
+    a:link{
+        color:gold;
+    }
+
+    a:active{
+        color:lime;
+    }
+
+    a:hover{
+        color:red;
+    }
+
+
+    a:visited{
+        color:green;
+    }
 
 </style>
 
@@ -10,7 +53,12 @@
 <body>
 
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est commodi molestiae praesentium ad voluptatum officia dolore reiciendis velit! Repudiandae fuga ad esse laboriosam, quos placeat maiores ipsa voluptas consequatur architecto odit, rerum ducimus iure soluta debitis reprehenderit culpa? Beatae aliquid in praesentium fuga cumque quidem consequuntur ratione minima iure reiciendis.</p>
+<a href="http://www.facebook.com">Facebook</a>
+<a href="http://www.youtube.com">Youtube</a>
+
+
+<p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est commodi molestiae praesentium ad voluptatum officia dolore reiciendis velit! Repudiandae fuga ad esse laboriosam, quos placeat maiores ipsa voluptas consequatur architecto odit, rerum ducimus iure soluta debitis reprehenderit culpa? Beatae aliquid in praesentium fuga cumque quidem consequuntur ratione minima iure reiciendis.</p>
+
 
 
 </body>
