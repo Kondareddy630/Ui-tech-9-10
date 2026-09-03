@@ -2,8 +2,8 @@ Bootstrap
 ------------------------------
 1. Bootstrap  is a css framework.
 2. Framework means collection of libraries.
-3. Bootstrap  provide two libraries design the webpage easy and fast.
-      a). css library (css library contains pre-defined classess)
+3. Bootstrap  provide two libraries for design the webpages easy and fast.
+      a). css library (css library contains pre-defined classes)
       b). js library (js library contains pre-defined methods)
 4. css library used to design the webpages easy and fast.
 5. js library used to add the functionality to the webpage.
@@ -11,7 +11,7 @@ Bootstrap
 7. by using Bootstrap framework create the responsive webpages.
 
    responsive webpages means depends on device width automatically
-   adjust the content.
+   adjust the content.(FAQ)
 
 8. Bootstrap current version is Bootstrap5.
 
