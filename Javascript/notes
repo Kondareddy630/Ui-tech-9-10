@@ -1,0 +1,348 @@
+Number datatype
+---------------------------
+JavaScript Number Datatype
+-----------------------------------
+Number is a JavaScript datatype used to store numeric values.
+JavaScript uses the number datatype for both integers and decimal numbers.
+let a = 10;        // integer
+let b = 100.25;    // decimal
+let c = -100;      // negative number
+
+Check datatype:
+console.log(typeof a);  // number
+console.log(typeof b);  // number
+console.log(typeof c);  // number
+
+In JavaScript, 10 and 10.25 are both number. There is no separate int and float datatype.
+
+1. Different Number Representations in Your File
+Integer
+let a = 10;
+
+Decimal
+let b = 100.25;
+
+Negative number
+let c = -100;
+
+Binary
+Binary starts with 0b.
+let d = 0b1010;
+
+console.log(d);
+// 10
+
+Octal
+Octal starts with 0o.
+let e = 0o123;
+
+console.log(e);
+// 83
+
+Exponential
+let f = 2e3;
+
+console.log(f);
+// 2000
+
+2e3 means:
+2 × 10³
+= 2000
+
+2. Number()
+Number() converts a value into a number.
+let num1 = "100.25";
+let num2 = "200.33";
+
+console.log(Number(num1));
+console.log(Number(num2));
+
+Output:
+100.25
+200.33
+
+Example
+console.log(Number(num1) + Number(num2));
+
+Output:
+300.58
+
+Why do we need Number()?
+Without conversion:
+let num1 = "100.25";
+let num2 = "200.33";
+
+console.log(num1 + num2);
+
+Output:
+100.25200.33
+
+Because both are strings, + performs string concatenation.
+After conversion:
+console.log(Number(num1) + Number(num2));
+
+Output:
+300.58
+
+3. parseInt()
+parseInt() converts/extracts an integer from a value.
+console.log(parseInt("100.25"));
+
+Output:
+100
+
+The decimal part is removed.
+Your example
+let num1 = "100.25";
+let num2 = "200.33";
+
+console.log(parseInt(num1) + parseInt(num2));
+
+Output:
+300
+
+parseInt() with px
+This is one of the important examples from your file:
+let num3 = "100px";
+let num4 = "500px";
+
+console.log(parseInt(num3) + parseInt(num4));
+
+Output:
+600
+
+parseInt() reads the number from the beginning and stops when it reaches non-numeric text.
+"100px"
+  ↓
+ 100
+
+parseInt() examples from your file
+console.log(parseInt("10") + parseInt("20"));
+// 30
+
+console.log(parseInt("10") + parseInt("20abc"));
+// 30
+
+parseInt("20abc") gives 20.
+console.log(parseInt("10") + parseInt("20abc50"));
+// 30
+
+It still gets only 20.
+But:
+console.log(parseInt("10") + parseInt("abc50"));
+
+Output:
+NaN
+
+Because "abc50" starts with letters.
+4. parseFloat()
+parseFloat() extracts a decimal number.
+console.log(parseFloat("10.25"));
+
+Output:
+10.25
+
+Your example
+console.log(parseFloat("10") + parseFloat("20"));
+// 30
+
+console.log(parseFloat("10.25") + parseFloat("20.34"));
+// 30.59
+
+With px
+console.log(parseFloat("10px") + parseFloat("60px"));
+
+Output:
+70
+
+It extracts the numeric portion:
+"10px" → 10
+"60px" → 60
+
+5. Difference Between Number(), parseInt() and parseFloat()
+This is the most important part of your notes.
+let num = "100.25px";
+
+console.log(Number(num));
+console.log(parseInt(num));
+console.log(parseFloat(num));
+
+Output:
+NaN
+100
+100.25
+
+Remember:
+Number()
+    ↓
+Converts the complete value
+
+parseInt()
+    ↓
+Extracts integer
+
+parseFloat()
+    ↓
+Extracts decimal number
+
+Another example:
+Number("100px");       // NaN
+parseInt("100px");     // 100
+parseFloat("100px");   // 100
+
+6. isNaN()
+isNaN() checks whether a value is Not a Number.
+Your examples
+console.log(isNaN("hello"));
+// true
+
+Because "hello" cannot be converted to a valid number.
+console.log(isNaN("100"));
+// false
+
+Because "100" can be converted to a number.
+console.log(isNaN(100));
+// false
+
+Because 100 is already a valid number.
+Using isNaN() with if
+Your file has:
+let age = 10;
+
+if (isNaN(age)) {
+    console.log("Age must be number");
+}
+else {
+    console.log(age);
+}
+
+Since age is 10:
+10
+
+will be printed.
+If:
+let age = "hello";
+
+then:
+Age must be number
+
+will be printed.
+7. isNaN() with Ternary Operator
+Your file also demonstrates the shorter version:
+isNaN(age)
+    ? console.log("Age must be number")
+    : console.log(age);
+
+This is a ternary operator.
+Equivalent if-else:
+if (isNaN(age)) {
+    console.log("Age must be number");
+}
+else {
+    console.log(age);
+}
+
+8. toLocaleString()
+Your file uses toLocaleString() for currency formatting and compact notation.
+Currency — Indian Rupees
+let price = 14900;
+
+console.log(
+    price.toLocaleString("en-IN", {
+        style: "currency",
+        currency: "INR",
+        minimumFractionDigits: 0
+    })
+);
+
+Output:
+₹14,900
+
+Meaning
+"en-IN"
+
+means Indian English formatting.
+style: "currency"
+
+means display as currency.
+currency: "INR"
+
+means Indian Rupees.
+minimumFractionDigits: 0
+
+means don't force decimal digits.
+Currency — US Dollars
+Your file:
+console.log(
+    price.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+        minimumFractionDigits: 0
+    })
+);
+
+Output:
+$14,900
+
+9. toLocaleString() with Compact Notation
+Your file has:
+let likes = 10000000;
+
+Instead of displaying:
+10,000,000
+
+you can use compact notation.
+console.log(
+    likes.toLocaleString("en-IN", {
+        notation: "compact"
+    })
+);
+
+For US formatting:
+console.log(
+    likes.toLocaleString("en-US", {
+        notation: "compact"
+    })
+);
+
+This is useful for:
+Likes
+Views
+Followers
+Downloads
+Subscribers
+
+For example:
+10M
+
+in US-style compact notation.
+Your File: Complete Number Methods/Functions
+So, only the methods/functions present in your file are:
+1. Number()
+Number("100")
+Number("100.25")
+
+2. parseInt()
+parseInt("100.25")
+parseInt("100px")
+
+3. parseFloat()
+parseFloat("100.25")
+parseFloat("100px")
+
+4. isNaN()
+isNaN("hello")
+isNaN("100")
+isNaN(100)
+
+5. toLocaleString()
+Currency:
+price.toLocaleString("en-IN", {
+    style: "currency",
+    currency: "INR"
+});
+
+Compact:
+likes.toLocaleString("en-IN", {
+    notation: "compact"
+});

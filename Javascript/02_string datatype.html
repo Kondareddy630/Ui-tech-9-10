@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+
+<script>
+
+// string
+
+let str1='good morning';
+let str2="good morning";  // string literals
+let str3=`good morning`;  // Template literals (Es6)
+
+// String literals vs Template literals
+
+let str4="hello students goo morning";
+let str5=`
+hello 
+hai
+good morning
+`;
+
+
+let a=100;
+let b=200;
+let c=a+b;
+console.log(a + " " + "+"  + " " +b + " " + "=" + c);
+
+// ${} binding expression
+
+console.log(`
+${a} + ${b} =${c}
+`)
+
+
+let x=740;
+let y=850;
+console.log(`
+
+${x} + ${y} =${x+y}
+
+`);
+
+// String Methods
+
+
+let msg="Hello";
+console.log(msg);
+console.log(msg[0]);
+console.log(msg[1]);
+console.log(msg[2]);
+console.log(msg[-1]);
+
+//at()
+
+console.log(msg.at(0));
+console.log(msg.at(1));
+console.log(msg.at(-1));
+
+//toUpperCase()
+
+let tech="java full stack";
+console.log(tech.toUpperCase());
+
+
+
+//toLowerCase()
+
+let tech1="JAVA FULL STACK";
+console.log(tech.toLowerCase());
+
+//indexOf()
+
+let email="abcd@gmail.com";
+console.log(email.indexOf("d"));//3
+console.log(email.indexOf("@"));//-1
+
+if(email.indexOf("@")==-1)
+{
+   console.log("Invalid email");
+
+}
+else{
+    console.log("Valid email");
+}
+
+//charAt()
+
+let username="Raju";
+console.log(username.charAt(0));
+console.log(username.charAt(1));
+console.log(username.charAt(2));
+
+if(username.charAt(0)>='A'  && username.charAt(0)<='Z')
+{
+    console.log("Valid username");
+
+}
+
+else{
+    console.log("Invalid username");
+}
+
+//charCodeAt()
+
+
+let username1="Baju";
+console.log(username1.charCodeAt(0));
+console.log(username1.charCodeAt(1));
+console.log(username1.charCodeAt(2));
+
+if(username.charCodeAt(0)>=65  && username.charCodeAt(0)<=90)
+{
+    console.log("Valid username");
+
+}
+
+else{
+    console.log("Invalid username");
+}
+
+
+// split(); join()
+
+let msg1="hello";
+console.log(msg1.split("").reverse().join(""));
+
+
+// wap print the string reverse without loops
+
+let mymessage="hello";
+console.log(mymessage.split("").reverse().join(""));
+
+//includes()
+
+let productName="tvs";
+console.log(productName.includes("mobiles"));
+
+// slice(), substring(),substr()
+
+
+
+
+
+</script>
+    
+</body>
+</html>

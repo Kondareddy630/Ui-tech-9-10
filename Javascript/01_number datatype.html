@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+
+<script>
+
+
+
+
+// number : In javacript belowe any these number datatype
+
+let a=10; // int
+let b=100.25; // float
+let c=-100; // negative
+let d=0b1010; // binary
+let e=0o123; //octa
+let f=2e3;// exponent
+
+console.log(typeof(a));
+console.log(typeof(b));
+console.log(typeof(c));
+console.log(typeof(d));
+console.log(typeof(e));
+console.log(typeof(f));
+
+// Number(),parseInt(),parseFloat()
+
+let num1="100.25";
+let num2="200.33";
+console.log(num1+num2);
+console.log(Number(num1)+Number(num2));
+console.log(parseInt(num1)+parseInt(num2));
+
+let num3="100px";
+let num4="500px";
+
+console.log(Number(num3) +Number(num4));
+console.log(parseInt(num3) +parseInt(num4));
+
+console.log(parseInt("10")+parseInt("20"));
+console.log(parseInt("10")+parseInt("20abc"));
+console.log(parseInt("10")+parseInt("20abc50"));
+console.log(parseInt("10")+parseInt("abc50"));
+
+console.log(Number("10")+Number("abc50"));
+
+console.log(10+20);
+console.log(10*"hello");
+
+
+console.log(parseFloat("10")+parseFloat("20"));
+console.log(parseFloat("10.25")+parseFloat("20.34"));
+console.log(parseFloat("10px")+parseFloat("60px"));
+console.log(Number("10px")+Number("60px"));
+
+//isNaN()=>true=>false (FAQ)
+
+console.log(isNaN("hello"));//true
+console.log(isNaN("100"));//false
+console.log(isNaN(100));//false
+
+
+let age=10;
+
+if(isNaN(age))
+{
+    console.log("Age must be number");
+}
+else{
+    console.log(age);
+}
+
+(isNaN(age))?console.log("Age must be number"):console.log(age);
+
+let price=14900;
+
+console.log(price.toLocaleString('en-in',{style:"currency",currency:"INR",minimumFractionDigits:0}));
+
+
+console.log(price.toLocaleString('en-us',{style:"currency",currency:"USD",minimumFractionDigits:0}));
+
+let likes=10000000;
+console.log(likes.toLocaleString("en-in",{notation:"compact"}));
+console.log(likes.toLocaleString("en-us",{notation:"compact"}));
+
+
+</script>
+    
+</body>
+</html>
