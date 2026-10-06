@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+
+<script>
+
+//array methods
+let numbers=[10,20,30,40,50,60,70]; 
+console.log(numbers);
+
+//length=> 
+console.log(numbers.length);
+
+//for loop()
+
+for(let i=0;i<numbers.length;i++)
+{
+    console.log(numbers[i]);//10
+}
+
+
+//map(),filter(),forEach(),find()=> Iterations
+
+let colors=["red","blue","cyan","gold"];
+console.log(colors);
+
+colors.map(function(color,index){
+    console.log(color,index);// red blue
+});
+
+colors.forEach(function(color,index){
+    console.log(color,index);// red blue
+});
+
+
+
+
+
+let mynumbers=[1,2,3,4];
+
+let even=mynumbers.map(function(num){
+    return num*num;
+
+});
+console.log(even);
+
+let even1=mynumbers.forEach(function(num){
+    return num*num;
+
+});
+console.log(even1);
+
+//filter
+let hellonumbers=[1,2,3,4,6,7,8,9,10];
+console.log(hellonumbers);
+
+let myeven=hellonumbers.filter(function(num){
+    return num%2==0;//true
+});
+console.log(myeven);
+
+
+let names=["anu","hanvika","pooja","sahasra","ravi"];
+let mynames=names.filter(function(name){
+    return name.length>=5;
+});
+console.log(mynames);
+
+//find(),findIndex()
+
+let firsteven=hellonumbers.find(function(num){
+   return num%2==0;
+
+})
+
+console.log(firsteven); 
+
+let firstevenindex=hellonumbers.findIndex(function(num){
+   return num%2==0;
+
+})
+
+console.log(firstevenindex); 
+
+
+</script>
+    
+</body>
+</html>
