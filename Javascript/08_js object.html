@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="container mt-5">
+
+
+    <table class="table table-bordered table-striped shadow">
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Fees</th>
+            </tr>
+        </thead>
+
+        <tbody id="hello">
+
+        </tbody>
+
+
+    </table>
+
+
+<script>
+// object
+
+
+let student={
+
+    sid:101,
+    name:"raju",
+    course:"java",
+    fees:5000
+
+};
+
+console.log(student);
+
+//., [] notations
+
+
+console.log(student.sid);//static
+console.log(student.name);
+console.log(student.course);
+console.log(student["fees"]);//dynamic
+console.log(student.city);
+
+let{sid,name,course,fees}=student;
+console.log(sid,name,course,fees);
+
+
+let product={
+
+    title:"Pizza",
+    price:400,
+    desc:"Pizza is a savory dish made of a flattened wheat bread dough base topped with tomato sauce",
+    category:"veg",
+
+    rating:{
+        rate:"4.5",
+        count:"500"
+    }
+}
+
+console.log(product);
+console.log(product.rating);
+
+console.log(product.title);
+console.log(product.price);
+console.log(product.desc);
+console.log(product.category);
+console.log(product.rating.rate);
+console.log(product.rating.count);
+
+let{title,desc,price,category}=product;
+console.log(title,desc);
+
+
+let{rate,count}=product.rating;
+console.log(rate,count);
+
+
+let employee={
+
+    empno:101,
+    name:"hello",
+    job:"mangaer",
+    salary:50000,
+
+    dept:{
+        deptno:101,
+        dname:"dev",
+        loc:"hyd"
+    },
+
+    account:{
+
+         saving:
+         {
+            accno:112233,
+            balance:1000
+         },
+        current:{
+            accno:778899,
+            balance:9000
+        }
+
+    }
+}
+
+console.log(employee.account.saving.accno);
+console.log(employee.account.saving.balance);
+
+console.log(employee.account.current.accno);
+console.log(employee.account.current.accno);
+
+
+let{accno,balance}=employee.account.current;
+console.log(accno,balance);
+
+let{accno:acno,balance:bal}=employee.account.saving;
+console.log(acno,bal);
+
+
+let mystudent={
+
+    sid:101,
+    name:"hello",
+    eng:80,
+    tel:90,
+    sc:50,
+    mat:100,
+
+    total:function(){
+        return mystudent.eng+mystudent.tel+mystudent.sc+mystudent.mat;
+    },
+
+    result:function(){
+        return (mystudent.eng>=35 && mystudent.tel>=35 && mystudent.sc>=35 && mystudent.mat>=35)?"Pass":"Fail"
+        
+    }
+
+
+}
+
+console.log(mystudent);
+console.log(mystudent.total());
+console.log(mystudent.result());
+
+
+// array or objects
+
+
+
+
+let mystudents=[
+
+{sid:101,name:"a",course:"java",fees:1000},
+{sid:101,name:"a",course:"java",fees:1000},
+{sid:102,name:"b",course:"ui",fees:9000},
+{sid:103,name:"d",course:"python",fees:5000},
+{sid:104,name:"e",course:"ui",fees:6000},
+{sid:105,name:"f",course:"python",fees:5000}
+
+
+
+]
+
+mystudents.map(function(s)
+{
+
+    document.getElementById("hello").innerHTML +=`
+
+    <tr>
+        <td>${s.sid}</td>
+        <td>${s.name}</td>
+        <td>${s.course}</td>
+        <td>${s.fees}</td>
+    </tr>
+    
+    `
+}
+);
+
+
+
+</script>
+
+</body>
+</html>
