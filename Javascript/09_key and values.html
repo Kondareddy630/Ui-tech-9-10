@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="container mt-5">
+
+
+
+
+    
+
+
+
+<script>
+
+    let student={
+
+        sid:101,
+        name:"hello",
+        course:"java",
+        fees:8000,
+        phone:7485968,
+        city:"hyd"
+        
+    }
+
+    console.log(student);
+
+    console.log(Object.keys(student));
+    console.log(Object.values(student));
+    console.log("city" in student);
+
+    student.state="ts";
+    student.pincode="500072";
+    console.log(student);
+
+    delete student.city;
+    delete student.state;
+    console.log(student);
+
+   
+
+
+</script>
+
+</body>
+</html>

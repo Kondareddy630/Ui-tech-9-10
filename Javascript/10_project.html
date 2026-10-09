@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="container mt-5">
+
+   
+
+<table class="table table-bordered shadow table-striped">
+
+    <thead>
+        <tr id="headerrow">
+
+        </tr>
+
+    </thead>
+
+    <tbody id="hello">
+
+    </tbody>
+
+</table>
+
+
+    
+
+
+
+<script>
+
+
+let coursename="";
+let order="asc";
+
+    
+let mystudents=[
+
+{sid:101,name:"a",course:"java",fees:1000},
+{sid:102,name:"a",course:"node js",fees:6000},
+{sid:103,name:"b",course:"ui",fees:9000},
+{sid:104,name:"d",course:"python",fees:5000},
+{sid:105,name:"e",course:"ui",fees:8000},
+{sid:106,name:"f",course:"java",fees:9900}
+
+
+
+]
+   
+Object.keys(mystudents[0]).map(function(h){
+
+    document.getElementById("headerrow").innerHTML += `<th>${h}</th>`
+})
+
+let filtedstudents=mystudents.filter(function(s){
+
+    return s.course.toLowerCase().includes(coursename.toLowerCase());
+});
+
+
+filtedstudents.sort((a,b)=>b.fees-a.fees);
+
+if(order=="asc")
+{
+filtedstudents.sort((a,b)=>a.fees-b.fees);
+}
+
+else if(order=="desc")
+{
+    filtedstudents.sort((a,b)=>b.fees-a.fees);
+}
+
+
+filtedstudents.map(function(s){
+
+    document.getElementById("hello").innerHTML  +=  `
+
+    <tr>
+        <td>${s.sid}</td>
+        <td>${s.name}</td>
+        <td>${s.course}</td>
+          <td>${s.fees}</td>
+    </tr>
+    
+    
+    
+    `
+
+})
+
+
+
+
+</script>
+
+</body>
+</html>

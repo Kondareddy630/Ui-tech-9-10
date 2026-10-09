@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="container mt-5">
+
+
+
+<div class="row" id="hello">
+
+</div>
+
+
+
+<script>
+
+
+
+
+let mystudents=[
+
+{sid:101,name:"a",course:"java",fees:1000,photo:"https://media.istockphoto.com/id/2162644435/photo/walking-happy-and-girl-with-friends-at-university-for-learning-bonding-and-talking-with-fun.jpg?s=612x612&w=0&k=20&c=g91i2RMmSm6R7if50xF2exc5X4_7oYA1SeDl0R3I2dg="},
+{sid:101,name:"a",course:"java",fees:1000,photo:"https://media.istockphoto.com/id/1352606416/photo/young-woman-working-at-home-stock-photo.jpg?s=612x612&w=0&k=20&c=uKfBCoTeP54nA8KOzXDLIyoU31nZ4a4UreFE4p_x_3A="},
+{sid:102,name:"b",course:"ui",fees:9000,photo:"https://media.istockphoto.com/id/1461630476/photo/group-of-students-filling-admission-application-form-or-preparing-for-exams-on-college-campus.jpg?s=612x612&w=0&k=20&c=qfInNvlYZUkUkUWQeIctp4q48DZHm2ElAhZt6dCyaiA="},
+{sid:103,name:"d",course:"python",fees:5000,photo:"https://media.istockphoto.com/id/1369754239/photo/university-student-in-white-background-stock-photo.jpg?s=612x612&w=0&k=20&c=LjFVDfjusWBjYTNliHV9DyXfApPGc8DmgBGEtfVgQ0Q="},
+{sid:104,name:"e",course:"ui",fees:6000,photo:"https://media.istockphoto.com/id/1443245439/photo/business-meeting-businesswoman-woman-office-portrait-job-career-happy-businessman-teamwork.jpg?s=612x612&w=0&k=20&c=1ZR02c1UKfGdBCNWzzKlrwrVZuEiOqnAKcKF4V_t038="},
+{sid:105,name:"f",course:"python",fees:5000,photo:"https://media.istockphoto.com/id/1461630610/photo/group-of-happy-students-checking-results-on-laptop-while-sitting-on-college-campus-concept-of.jpg?s=612x612&w=0&k=20&c=cFO_ROJ_yxhk7lv8Xwm13iaIUOnL_nJMO1EU2lKhPVQ="},
+
+{sid:106,name:"raju",course:"python",fees:5000,photo:"https://media.istockphoto.com/id/1461630610/photo/group-of-happy-students-checking-results-on-laptop-while-sitting-on-college-campus-concept-of.jpg?s=612x612&w=0&k=20&c=cFO_ROJ_yxhk7lv8Xwm13iaIUOnL_nJMO1EU2lKhPVQ="}
+
+]
+
+
+mystudents.map(function(s){
+
+document.getElementById("hello").innerHTML +=`
+    <div class="col-lg-3">
+
+        <div class="card shadow mt-2">
+            <img src=${s.photo} class="card-img-top" style="height:200px">
+            <div class="card-header">
+                <h4 class="text-capitalize">${s.course}</h4>
+            </div>
+
+            <div class="card-body">
+                <dt>Name</dt>
+                <dd>${s.name}</dd>
+
+                <dt>Fees</dt>
+                <dd>${s.fees}</dd>
+
+            </div>
+
+            <div class="card-footer">
+                <button class="btn btn-success w-100">See More</button>
+            </div>
+
+            
+        </div>
+
+    </div>
+    
+    `
+
+})
+
+</script>
+
+</body>
+</html>
