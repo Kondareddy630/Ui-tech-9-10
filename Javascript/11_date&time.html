@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="container mt-5">
+
+   
+
+<nav class="bg-danger text-white p-3 d-flex justify-content-between align-items-center">
+
+<div>
+    <h3>Hdfc Bank</h3>
+</div>
+
+<div>
+    <span id="date"></span>
+</div>
+
+<div>
+    <span id="time"></span>
+</div>
+
+<div>
+    <span id="time1"></span>
+</div>
+    
+</nav>
+
+
+
+
+
+
+<script>
+
+let sysdate=new Date();
+console.log(sysdate);
+
+//onlyDateFormat()
+
+console.log(sysdate.toDateString());
+console.log(sysdate.toLocaleDateString());
+
+// document.getElementById("date").innerText=sysdate.toDateString();
+
+// document.getElementById("date").innerText=sysdate.toLocaleDateString();
+// document.getElementById("time").innerText=sysdate.toTimeString();
+// document.getElementById("time").innerText=sysdate.toLocaleTimeString();
+
+
+function clock()
+{
+
+    let time=new Date().toLocaleTimeString('en-in',{timeZone: "Asia/Kolkata"});
+    document.getElementById("time").innerText=time;
+
+}
+
+setInterval(clock,1000);
+
+
+
+function clock1()
+{
+
+    let time=new Date().toLocaleTimeString('en-us',{timeZone: "America/New_York"});
+    document.getElementById("time1").innerText=time;
+
+}
+
+setInterval(clock1,1000);
+
+
+
+document.getElementById("date").innerText=new Date().toDateString();
+document.getElementById("date").innerText=new Date().toLocaleDateString();
+
+// cutsom date format
+
+let day=new Date().getDay();
+console.log(day);
+
+
+let date=new Date().getDate();
+console.log(date);
+
+let month=new Date().getMonth()+1;
+console.log(month);
+
+
+
+let year=new Date().getFullYear();
+console.log(year);
+
+// how to dispaly custom date format
+
+
+let weeks=["Sunday","Monday","Tueday","Wedday","Thuday","Friday","Satday"];
+let months=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"];
+
+
+let week=sysdate.getDay();
+let cdate=sysdate.getDate();
+let cmonth=sysdate.getMonth();
+let cyear=sysdate.getFullYear();
+
+let cutsomDate=`
+
+${weeks[week]},${cdate}-${months[cmonth]}-${cyear}
+
+`
+;
+console.log(cutsomDate);
+
+document.getElementById("date").innerText=cutsomDate;
+
+
+</script>
+
+</body>
+</html>
