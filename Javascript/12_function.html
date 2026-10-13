@@ -17,24 +17,20 @@
 
 
 
-
-
-
 function printMessage()
 {
 
   console.log("Good morning");
 
-
 }
+
 printMessage();
 
 
 
 
 
-
-// name less function or function express
+// name less function or function expression
 
 let sum=function(){
 
@@ -44,7 +40,7 @@ let sum=function(){
     console.log(c);//600
 }
 
-
+sum();
 
 
 
@@ -52,7 +48,31 @@ let sum=function(){
 // arrow functions
 
 
+let msg=()=>console.log("hello");
+msg();
 
+
+let colors=["red","blue","green","cyan"];
+console.log(colors);
+
+
+colors.map((color)=>console.log(color));
+
+
+
+let mysum={
+  a:10,
+  b:20,
+
+  total:function(){
+       return this.a+this.b
+  },
+  
+
+}
+
+
+console.log(mysum.total())
 </script>
 
 </body>

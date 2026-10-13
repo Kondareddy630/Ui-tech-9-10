@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body class="container mt-5">
+
+   
+
+
+
+
+<script>
+
+//no arg, no return
+
+
+function sum()
+{
+  let a=100;
+  let b=200;
+  let c=a+b;
+  console.log(c);
+
+}
+
+sum();
+sum();
+sum();
+sum();
+
+// with arg, no return type
+
+let colors=["red","blue","gold","green"];
+let numbers=[10,20,30,40,50];
+
+
+numbers.map((e)=>console.log(e));
+colors.map((e)=>console.log(e));
+
+
+/*
+
+function printElements(elements)
+{
+
+  elements.map((e)=>console.log(e))
+
+}
+
+printElements(colors);
+printElements(numbers);
+printElements(["html","css","js"]);
+*/
+
+
+/*
+function mysum(a,b)
+{
+
+  console.log(a+b);
+
+}
+
+mysum(10,20);
+mysum(100,200);
+mysum(7,8);
+*/
+
+
+
+function mysum(a,b,c)
+{
+
+  let d=(a+b)*c; //900
+ 
+  
+  return d;
+
+ 
+}
+
+let result=mysum(10,20,30);
+console.log(result);
+
+
+
+</script>
+
+</body>
+</html>
