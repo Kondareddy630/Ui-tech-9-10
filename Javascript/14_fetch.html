@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+
+</head>
+<body class="container mt-5">
+
+   
+<div class="row" id="hello">
+
+</div>
+
+
+
+
+<script>
+
+//How to fetch the data from api
+
+
+fetch("https://fakestoreapi.com/products")
+.then((res)=>res.json())
+.then((products)=>{
+
+products.map((p)=>{
+
+    document.getElementById("hello").innerHTML +=`
+
+     <div class="col-lg-3">
+
+        <div class="card shadow mt-2">
+            <img src=${p.image} height="180px" class="card-img-top">
+            <div class="card-header">
+                <h6 class="text-capitalize">${p.category}</h6>
+            </div>
+
+            <div class="card-body">
+                <dt>Title</dt>
+                <dd class="text-truncate">${p.title}</dd>
+
+                <dt>Price</dt>
+                <dd>&#8377;${p.price}</dd>
+                
+                <dt>Rating</dt>
+                <dd class="badge bg-warning">${p.rating.rate}
+                    <span class="bi bi-star-fill"></span>
+                    </dd>
+            </div>
+
+            <div class="card-footer">
+                <button class="btn btn-success">Add To Cart</button>
+            </div>
+
+        </div>
+
+
+     </div>
+    
+    
+    `
+
+})
+   
+        
+
+
+  
+})
+.catch((error)=>console.log(error));
+
+
+
+
+
+</script>
+
+</body>
+</html>
