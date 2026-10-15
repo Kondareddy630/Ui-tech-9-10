@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+
+</head>
+<body class="container mt-5">
+
+   
+<div class="row" id="hello">
+
+</div>
+
+
+
+
+
+<script>
+
+async function loadProducts()
+{
+
+    let response=await fetch("https://dummyjson.com/products");
+    let data  =await response.json();
+    let products=data.products;
+
+    products.map((p)=>{
+
+        document.getElementById("hello").innerHTML +=`
+
+
+        <div class="col-lg-3 mt-2">
+            <div class="card shadow">
+
+                <img src=${p.thumbnail} height="200px" class="card-img-top">
+
+                <div class="card-header">
+                    <h5 class="text-capitalize">${p.category}</h5>
+                </div>
+
+
+                <div class="card-body">
+
+                   <dt>Title</dt>
+                   <dd class="text-truncate">${p.title}</dd>
+
+                   <dt>Rating</dt>
+                   <dd class="text-truncate badge bg-success">${p.rating}
+                    <span class="bi bi-star-fill"></span>
+                   </dd>
+
+                   <dt>Price</dt>
+                   <dd>&#8377;${p.price}</dd>
+
+                   <div>
+                    <button class="btn btn-dark">Add To Cart</button>
+                  </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+        
+        
+        `
+
+    })
+    
+}
+
+loadProducts();
+
+
+
+</script>
+
+</body>
+</html>
