@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+
+</head>
+<body>
+
+
+
+<header class="bg-danger text-white p-3 d-flex justify-content-between align-items-center">
+
+    <div>
+        <h2>My Shopping</h2>
+    </div>
+
+
+    <div  class="fs-5">
+        <span class="mx-1">Home</span>
+        <span class="mx-1">Jewelery</span>
+        <span class="mx-1">Electronics</span>
+        <span class="mx-1">Kids wear</span>
+    </div>
+
+    <div>
+        <button class="btn btn-primary">Show Items</button>
+    </div>
+
+</header>
+
+
+
+<main class="container-fluid">
+    <div class="row">
+
+        <div class="col-2  bg-light p-4">
+
+            <div>
+                <h5>Select a Category</h5>
+            </div>
+
+            <div class="mt-2">
+                <select class="form-select" id="categories" onchange="changeCategory()">
+                </select>
+            </div>
+
+            <div class="mt-3">
+                <h5>Price Range</h5>
+            </div>
+
+            <div>
+                <input type="range" class="form-range">
+            </div>
+            <div class="d-flex justify-content-between">
+                <span>1000</span>
+                <span>200000</span>
+            </div>
+
+            <div class="mt-3">
+                <h5>Ratings</h5>
+            </div>
+
+            <div class="mt-3">
+
+                <div>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                </div>
+
+                <div>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                   
+                </div>
+
+                <div>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    <span class="bi bi-star-fill text-warning"></span>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-10">
+
+            <div class="row" id="products">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+
+<script src="project1.js"></script>
+</body>
+</html>
