@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        margin-bottom: 500px !important;
+    }
+</style>
+  
+</head>
+<body class="container mt-5">
+
+<h1 id="heading1">Ui Technologies</h1>
+<h1 id="tech1">Java Full Stack</h1>
+<p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque atque libero enim, earum quis repudiandae repellat ab, excepturi vel id, iste obcaecati error totam labore explicabo laborum repellendus alias rem.</p>
+
+<p id="p2">Hello</p>
+
+
+<p id="p3">
+    <b>Good Morning</b>
+</p>
+
+<p id="p4">
+
+</p>
+
+<p id="p5"></p>
+
+
+<div class="card p-4 w-50 m-auto shadow">
+
+ 
+    <div class="mt-2">
+        <input type="text" placeholder="Number1" id="t1" class="form-control">
+    </div>
+
+
+      <div class="mt-2">
+        <input type="text" placeholder="Number2" id="t2" class="form-control">
+    </div>
+
+    
+      <div class="mt-3">
+        <input type="text" placeholder="Number3" id="t3" class="form-control">
+    </div>
+
+    <div class="mt-2">
+        <button class="btn btn-success" onclick="sum()">Add</button>
+        <button class="btn btn-danger">Sub</button>
+        <button class="btn btn-primary">Clear</button>
+        
+    </div>
+
+    <div class="mt-2">
+        <p>Result: <span id="result"></span> </p>
+
+    </div>
+    
+
+</div>
+
+
+
+<script>
+
+function sum(){
+    let a=parseInt(document.getElementById("t1").value);
+    let b=parseInt(document.getElementById("t2").value);
+    let c=a+b;
+    document.getElementById("t3").value=c;
+    document.getElementById("result").innerHTML=`<b>${c}</b>`;
+}
+
+
+console.log("hello");
+console.log(document.getElementById("heading1"));
+
+// innerText=> used to get or set the plain content(not parsing html tags)
+
+let heading1=document.getElementById("tech1").innerText;
+console.log(heading1);
+
+let para=document.getElementById("p1").innerText;
+console.log(para);
+
+let msg=" students good morning";
+document.getElementById("p2").innerText += msg;
+
+// innerHTML: get or set the content along with html tags
+
+let msg2=document.getElementById("p3").innerText;
+console.log(msg2);
+
+document.getElementById("p4").innerHTML="<b><u>Hello students</u></b>";
+document.getElementById("p5").innerHTML="&#8377;5000";
+
+
+// value: used to collect the data from html forms
+
+
+
+</script>
+
+
+
+</body>
+</html>
