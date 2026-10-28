@@ -79,12 +79,33 @@
 
 <script>
 
+/*
+
+function changeTheme() {
+    let checked = document.getElementById("t1").checked;
+    document.body.classList.toggle("theme", checked);
+}
+
+function changeTheme() {
+document.body.classList.toggle("theme");
+}
+
+*/
 
 function changeTheme()
 {
-  let checked = document.getElementById("t1").checked;
-    document.body.classList.toggle("theme", checked);
-  
+   let checked= document.getElementById("t1").checked;
+   
+   if(checked)
+   {
+    document.body.classList.add("theme");
+   }
+
+   else{
+    document.body.classList.remove("theme");
+   }
+
+   
 
 }
 
@@ -138,6 +159,8 @@ document.getElementById("h1").classList.add("danger","text-center","myborder");
 document.getElementById("myh1").classList.add("text-success","text-center","bg-info","shadow","rounded");
 
 document.getElementById("myh1").classList.remove("text-success","text-center");
+
+
 
 
 </script>
