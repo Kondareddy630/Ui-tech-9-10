@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        margin-bottom: 500px;
+    }
+</style>
+    
+</head>
+<body class="container">
+
+
+<form class="border border-1 shadow m-auto mt-5 p-3 rounded-2" style="width: 300px;" id="login">
+
+    <div class="my-2">
+        <h5 class="text-muted">Login Here</h5>
+    </div>
+
+    <div class="my-2">
+        <input type="text" placeholder="Username" id="t1" class="form-control">
+    </div>
+
+     <div class="my-2">
+        <input type="password" placeholder="Password" id="t2" class="form-control">
+    </div>
+
+     <div class="my-2">
+        <input type="submit" class="btn btn-success w-100">
+    </div>
+
+</form>
+
+
+
+
+<script>
+
+// value => used to collect the data from forms
+
+document.getElementById("login").addEventListener("submit",function(e){
+    
+    e.preventDefault();// used stop the page refresh
+
+  
+    let login={
+        username:document.getElementById("t1").value,
+        password:document.getElementById("t2").value
+    }
+
+    console.log(login);
+
+});
+
+</script>
+    
+</body>
+</html>
