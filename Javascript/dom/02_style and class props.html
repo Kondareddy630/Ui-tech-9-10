@@ -1,14 +1,171 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-</head>
-<body>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        margin-bottom: 500px !important;
+    }
+
+    .danger{
+        color:red;
+    }
+    .success{
+        color:green;
+    }
+
+    .primary{
+        color:blue;
+    }
+    .text-center{
+        text-align: center;
+    }
+
+    .myborder{
+        border:2px solid red;
+    }
+    .theme{
+        background: black;
+        color:white;
+
+    }
+
+    .normal{
+
+        background: white;
+        color:black;
+    }
+</style>
+  
+</head>
+<body class="container mt-5">
+
+<div class="form-switch">
+    <input type="checkbox" class="form-check-input" oninput="changeTheme()" id="t1">
+    <label class="form-label">Theme</label>
+</div>
+
+
+<p id="p1"></p>
+
+<p id="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum laboriosam laudantium blanditiis. Doloribus tempore minima illo dignissimos, dolores optio voluptas adipisci commodi a sit exercitationem laborum nulla sed, mollitia nisi.</p>
+
+<p id="p3"></p>
+
+<p id="p4"></p>
+
+<div id="div1">
+    <b>bold</b>
+    <u>underilne</u>
+    <i style="display: none;">Italic</i>
+</div>
+
+
+<p id="p5"></p>
+
+
+<h1 class="red">Java Full Stack</h1>
+<h1 class="red">Python Full Stack</h1>
+
+<h1 class="green" style="color:red;">Ui Full Stack</h1>
+<h1 class="green" style="color:green;">Mern Full Stack</h1>
+
+<h1 id="h1">Ui Full Stack</h1>
+
+<h1 id="myh1">React</h1>
 
 <script>
-    
+
+/*
+
+function changeTheme() {
+    let checked = document.getElementById("t1").checked;
+    document.body.classList.toggle("theme", checked);
+}
+
+function changeTheme() {
+document.body.classList.toggle("theme");
+}
+
+*/
+
+function changeTheme()
+{
+   let checked= document.getElementById("t1").checked;
+   
+   if(checked)
+   {
+    document.body.classList.add("theme");
+   }
+
+   else{
+    document.body.classList.remove("theme");
+   }
+
+   
+
+}
+
+// read and set the content dom provide below properties
+
+//innerText=> read and set the content
+
+document.getElementById("p1").innerText="Hello students";
+let p1=document.getElementById("p2").innerText;
+console.log(p1);
+
+//innerHTML
+document.getElementById("p3").innerHTML="<b><u>Hello students</u></b>";
+document.getElementById("p4").innerHTML="&#8377;960";
+let data=document.getElementById("div1").innerHTML;
+console.log(data);
+
+//textContent
+let data1=document.getElementById("div1").textContent;
+console.log(data1);
+
+//outerHTML
+document.getElementById("p5").outerHTML="<h1>Hello</h1>";
+
+
+// you want apply the css style dom provide belowe properties
+
+
+// style: used to get or set the css styles
+
+
+let headingelements=document.getElementsByClassName("red");
+console.log(headingelements);
+
+console.log(headingelements[0]);
+console.log(headingelements[1]);
+
+headingelements[0].style.color="red";
+headingelements[0].style.backgroundColor="pink";
+headingelements[0].style.textAlign="center";
+headingelements[0].style.padding="10px";
+headingelements[0].style.boxShadow="4px 4px 4px black";
+
+let elements = document.getElementsByClassName("green");
+console.log(getComputedStyle(elements[0]).color);
+
+
+
+document.getElementById("h1").classList.add("danger","text-center","myborder");
+
+document.getElementById("myh1").classList.add("text-success","text-center","bg-info","shadow","rounded");
+
+document.getElementById("myh1").classList.remove("text-success","text-center");
+
+
+
+
 </script>
-    
+
+
+
 </body>
 </html>
