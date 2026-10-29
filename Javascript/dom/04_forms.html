@@ -17,6 +17,11 @@
 
 <form class="border border-1 shadow m-auto mt-5 p-3 rounded-2" style="width: 300px;" id="login">
 
+    <div class="form-switch">
+        <input type="checkbox" class="form-check-input" id="theme">
+        <label class="ms-1">Change Theme</label>
+    </div>
+
     <div class="my-2">
         <h5 class="text-muted">Login Here</h5>
     </div>
@@ -39,6 +44,16 @@
 
 
 <script>
+
+  
+document.getElementById("theme").addEventListener("change",function()
+{
+
+
+
+    document.getElementById("login").classList.toggle("bg-dark",this.checked);
+
+})
 
 // value => used to collect the data from forms
 

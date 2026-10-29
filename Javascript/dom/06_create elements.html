@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        margin-bottom: 500px;
+    }
+</style>
+    
+</head>
+<body class="container">
+
+
+
+
+
+
+
+<script>
+
+let students=[
+    {sid:101,name:"a",course:"java",fees:1000},
+    {sid:102,name:"b",course:"python",fees:6000},
+    {sid:103,name:"c",course:"react",fees:9000},
+    {sid:104,name:"d",course:"ui tech",fees:8000},
+    {sid:105,name:"d",course:"ui tech",fees:8000},
+    {sid:106,name:"d",course:"ui tech",fees:8000},
+
+];
+
+
+let table=document.createElement("table");
+table.className="table table-bordered";
+document.body.appendChild(table);
+
+
+let thead=document.createElement("thead");
+let tbody=document.createElement("tbody");
+table.append(thead,tbody);
+
+
+students.forEach(function(s){
+
+    let tr=document.createElement("tr");
+
+    let idcell=document.createElement("td");
+    let namecell=document.createElement("td");
+    let coursecell=document.createElement("td");
+    let feescell=document.createElement("td");
+    
+    idcell.innerText=s.sid;
+    namecell.innerText=s.name;
+    coursecell.innerText=s.course;
+    feescell.innerText=s.fees;
+    tr.append(idcell,namecell,coursecell,feescell);
+    tbody.appendChild(tr);
+
+
+})
+
+
+let technolgies=["html","css","js","react","bootstrap","angular","oracle"];
+
+
+
+let ol=document.createElement("ol");
+document.body.appendChild(ol);
+
+technolgies.forEach(function(tech){
+    let li=document.createElement("li");
+    li.textContent=tech;
+    ol.appendChild(li);
+});
+
+   
+//createElement()
+
+let h1=document.createElement("h1");
+document.body.appendChild(h1);
+//appendChild()
+h1.textContent="Java Full Stack";
+h1.style.color="red";
+h1.style.backgroundColor="pink";
+h1.style.padding="10px";
+h1.style.boxShadow="4px 4px 4px black";
+
+let p=document.createElement("p");
+document.body.appendChild(p);
+p.innerHTML="<b>Good morning</b>";
+// p.className="text-white bg-success p-4 fs-4 rounded shadow";
+p.classList.add("text-danger", "bg-success","p-2");
+
+
+
+let maindiv=document.createElement("div");
+document.body.appendChild(maindiv);
+
+let myh1=document.createElement("h1");
+myh1.innerText="I am h1";
+
+let mypara=document.createElement("p");
+mypara.textContent="I am para";
+
+maindiv.append(myh1,mypara);
+
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
