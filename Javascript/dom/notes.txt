@@ -74,3 +74,14 @@ setAttribute
 className
 classList
 
+
+Js events
+
+--------------
+js event is a action perfomed by user on the browser , it will do the some
+task.
+
+button events
+mouse events
+keyboard events
+timer events

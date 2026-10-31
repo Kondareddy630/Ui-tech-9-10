@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        margin-bottom: 500px;
+    }
+</style>
+    
+</head>
+<body class="container mt-5">
+
+
+
+
+<button class="btn btn-success my-2" onclick="showMessage()">Show Message</button>
+
+<p id="p1"></p>
+
+<br>
+<br>
+
+<p id="count">0</p>
+
+<button class="btn btn-primary" id="btn1">+</button>
+<button class="btn btn-danger" id="btn2">-</button>
+
+<p id="message"></p>
+
+<script>
+
+
+let button=document.createElement("button");
+button.innerText="Click Me";
+button.className="btn btn-dark";
+document.body.appendChild(button);
+button.addEventListener("click",function()
+{
+   document.getElementById("message").innerText="Javascript used to add the functionality to the webpage." 
+})
+
+
+
+let count=0;
+document.getElementById("btn1").onclick=function()
+{
+  
+    document.getElementById("count").innerText=count++;
+}
+
+
+document.getElementById("btn2").addEventListener("click",function()
+{
+    document.querySelector("#count").innerText=count--;
+
+});
+
+
+
+
+function showMessage()
+{
+    let p=document.getElementById("p1");
+    p.innerText="Hello students good morning";
+    p.style.color="red";
+    p.style.background="pink";
+    p.style.padding="10px";
+    p.style.boxShadow="4px 4px 2px black";
+    p.style.fontSize="20px";
+
+
+
+}
+
+</script>
+    
+</body>
+</html>

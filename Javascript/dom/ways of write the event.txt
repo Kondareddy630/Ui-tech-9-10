@@ -1,0 +1,87 @@
+Javascript DOM
+------------------------
+DOM stands for document object modal.
+While load the webpage browser  arrange the html elements in tree  structure
+called as dom.
+
+html programm
+---------------
+<html>
+
+<head>
+<title>Hello</title>
+</head>
+
+<body>
+<p>Hello</p>
+<h3>Javascript</h3>
+<div>
+   <span>good morning</span>
+   <p>Hello students</p>
+</div>
+</body>
+
+
+
+</html>
+
+dom tree
+-----------------
+
+                      html
+                    
+                head         body
+
+                title             p    h3     div
+                                             span p
+                   hello
+
+
+
+Using Javascript dom  you can access html elements.
+Using Javascript dom  modify the content.
+Using Javascript dom update the new content.
+Using Javascript dom apply the css styles.
+Using Javascript remove the html elements.
+Using Javascript add the actions.
+Using Javascript crate the elements.
+
+note: using js dom add the content on the webpage dynamically, add the functionality.
+js dom used to manipulate the html elements(create,add the content,remove)
+
+Dom methods
+--------------------
+You want manipulate the html elements js provide dom methods and properties.
+
+
+dom methods used to select the html elements. you want select the elements js provide below methods.
+-----------------------------------------------
+
+1.document.getElementById();used to select the element based on id
+2.document.getElementsClassName();
+3.document.getElementsTagName();
+4.document.querySelector();
+5.document.querySelectorAll();
+
+dom properties are  used to get,set,modify, remove the content  and apply the css styles
+---------------------------------------------------------------------------
+innerText
+innerHTML
+style
+value
+getAttribute
+setAttribute
+className
+classList
+
+
+Js events
+
+--------------
+js event is a action perfomed by user on the browser , it will do the some
+task.
+
+button events
+mouse events
+keyboard events
+timer events

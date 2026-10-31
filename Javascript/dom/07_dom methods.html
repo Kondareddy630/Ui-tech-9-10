@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        margin-bottom: 500px;
+    }
+</style>
+    
+</head>
+<body class="container">
+
+
+
+<h1 id="h1">Hello</h1>
+
+<p class="red">hello1</p>
+<p class="red">hello2</p>
+<p class="red">hello3</p>
+
+<h2>Java</h2>
+<h2>Python</h2>
+<h2>Ui</h2>
+
+
+<script>
+
+let a=document.getElementById("h1");
+console.log(a);
+
+let p=document.getElementsByClassName("red");
+console.log(p);
+
+let h2=document.getElementsByTagName("h2");
+console.log(h2);
+
+// querySelector()
+
+let x=document.querySelector("#h1");
+console.log(x);
+
+let y=document.querySelector(".red");
+console.log(y);
+
+let z=document.querySelector("h2");
+console.log(z);
+
+
+let a1=document.querySelectorAll(".red");
+console.log(a1);
+
+
+let a2=document.querySelectorAll("h2");
+console.log(a2);
+
+</script>
+    
+</body>
+</html>
